@@ -168,15 +168,14 @@ class PhasePortrait2D:
         ax.grid(True, linestyle='--', alpha=0.6)
         plt.subplots_adjust(right=0.72)
 
-        # 核心修改：生成时间戳文件名并保存
         current_time = datetime.now().strftime("%Y%m%d_%H%M%S")
         filename = f"phase_portrait_{current_time}.png"
 
-        # 使用 bbox_inches='tight' 确保图例不会被裁剪掉
+        # 确保图例不会被剪掉
         plt.savefig(filename, bbox_inches='tight')
-        print(f"✅ 图像已成功保存至项目文件夹: {filename}")
+        print(f"😋图像已成功保存至项目文件夹: {filename}")
 
-        # 关闭图表释放内存，避免在无 GUI 环境下报错
+        # 关闭图表释放内存
         plt.close(fig)
 
 
